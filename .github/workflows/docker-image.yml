@@ -45,5 +45,5 @@ jobs:
         NEW_VERSION: ${{steps.version.outputs.version}}
       run: |
         docker push csparedes/docker-github-actions:$NEW_VERSION
-        docker push csparedes/docker-github-actions:latest
+        docker push csparedes/docker-github-actions
         
