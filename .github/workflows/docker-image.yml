@@ -39,11 +39,12 @@ jobs:
         NEW_VERSION: ${{steps.version.outputs.version}}
       run: |
         docker build -t csparedes/docker-github-actions:$NEW_VERSION .
+        docker build -t csparedes/docker-github-actions:latest .
         
     - name: Docker push
       env:
         NEW_VERSION: ${{steps.version.outputs.version}}
       run: |
         docker push csparedes/docker-github-actions:$NEW_VERSION
-        docker push csparedes/docker-github-actions
+        docker push csparedes/docker-github-actions:latest
         
